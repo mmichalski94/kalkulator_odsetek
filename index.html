@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator odsetek</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Wprowadź dane</h1>
+    <form>
+        <label for="wplata">Wpłata w PLN: </label>
+        <input type="number" id="wplata" value="0" min="0">
+        <label for="okres-kapitalizacji">  Częstotliwość kapitalizacji: </label>
+        <select id="okres-kapitalizacji">
+              <option value="12">Miesięcznie</option>
+              <option value="4">Kwartalnie</option>
+              <option value="1">Rocznie</option>
+        </select><br />
+        <label for="ilosc-lat">Liczba lat: </label>
+        <input type="number" id="ilosc-lat" value="1" min="1" ><br />
+        <label for="oprocentowanie">Stopa zwrotu w %: </label>
+        <input type="number" id="oprocentowanie" value="0" min="0" ><br />
+        <input type="checkbox" id="podatek" name="checkbox" />Uwzględnij podatek belki 19%: <br />
+        <input onclick="oblicz(event)" type="submit" value="Oblicz">
+
+    </form>
+    <p id="wynik"></p>
+<script src="js/calculator.js"></script>
+</body>
+
+</html>
